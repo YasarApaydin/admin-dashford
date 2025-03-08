@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analitik - Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Include -->
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Veri Ara">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <div class="notifications">
+                        <i class="far fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                    <div class="profile">
+                        <i class="fas fa-user"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-header">
+                <h2>Veri Analizi</h2>
+                <div class="header-actions">
+                    <button class="filter-button">
+                        <i class="fas fa-calendar"></i>
+                        <span>Son 30 Gün</span>
+                    </button>
+                    <button class="add-button">
+                        <i class="fas fa-download"></i>
+                        <span>Rapor İndir</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="quick-stats">
+                <div class="quick-stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h4>Toplam Üye</h4>
+                        <p>3,247</p>
+                        <span class="trend positive">
+                            <i class="fas fa-caret-up"></i>15%
+                        </span>
+                    </div>
+                </div>
+                <div class="quick-stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h4>Toplam Satış</h4>
+                        <p>₺186,429</p>
+                        <span class="trend positive">
+                            <i class="fas fa-caret-up"></i>8%
+                        </span>
+                    </div>
+                </div>
+                <div class="quick-stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h4>Toplam Ürün</h4>
+                        <p>547</p>
+                        <span class="trend negative">
+                            <i class="fas fa-caret-down"></i>2%
+                        </span>
+                    </div>
+                </div>
+                <div class="quick-stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h4>Sayfa Görüntüleme</h4>
+                        <p>24,589</p>
+                        <span class="trend positive">
+                            <i class="fas fa-caret-up"></i>12%
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3>
+                        Satış Grafiği
+                        <span class="period">Son 30 Gün</span>
+                    </h3>
+                    <div class="chart-placeholder"></div>
+                </div>
+                <div class="chart-card">
+                    <h3>
+                        Ziyaretçi Analizi
+                        <span class="period">Bu Hafta</span>
+                    </h3>
+                    <div class="chart-placeholder"></div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Ürün</th>
+                            <th>Satış</th>
+                            <th>Gelir</th>
+                            <th>Dönüşüm</th>
+                            <th>Trend</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <i class="fas fa-mobile"></i>
+                                    <div>
+                                        <h4>iPhone 14 Pro</h4>
+                                        <span>Telefon</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>156</td>
+                            <td>₺6,240,000</td>
+                            <td>68%</td>
+                            <td>
+                                <span class="trend positive">
+                                    <i class="fas fa-caret-up"></i>12%
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <i class="fas fa-laptop"></i>
+                                    <div>
+                                        <h4>MacBook Pro</h4>
+                                        <span>Bilgisayar</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>89</td>
+                            <td>₺4,716,911</td>
+                            <td>45%</td>
+                            <td>
+                                <span class="trend positive">
+                                    <i class="fas fa-caret-up"></i>8%
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <i class="fas fa-tablet"></i>
+                                    <div>
+                                        <h4>iPad Air</h4>
+                                        <span>Tablet</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>124</td>
+                            <td>₺2,356,876</td>
+                            <td>52%</td>
+                            <td>
+                                <span class="trend negative">
+                                    <i class="fas fa-caret-down"></i>5%
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <i class="fas fa-headphones"></i>
+                                    <div>
+                                        <h4>AirPods Pro</h4>
+                                        <span>Aksesuar</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>234</td>
+                            <td>₺1,871,766</td>
+                            <td>75%</td>
+                            <td>
+                                <span class="trend positive">
+                                    <i class="fas fa-caret-up"></i>18%
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Sidebar'ı yükle
+        fetch('./components/sidebar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('sidebar-container').innerHTML = html;
+            })
+            .catch(error => console.error('Sidebar yüklenirken hata:', error));
+    </script>
+</body>
+</html> 

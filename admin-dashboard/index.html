@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa - Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Include -->
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Ara">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-info">
+                    <div class="notifications">
+                        <i class="far fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                    <div class="profile">
+                        <i class="fas fa-user"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="quick-stats">
+                <div class="quick-stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h4>Üye</h4>
+                        <p>3.2k</p>
+                        <span class="trend positive">
+                            <i class="fas fa-caret-up"></i>12%
+                        </span>
+                    </div>
+                </div>
+                <div class="quick-stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h4>Gelir</h4>
+                        <p>186k</p>
+                        <span class="trend positive">
+                            <i class="fas fa-caret-up"></i>8%
+                        </span>
+                    </div>
+                </div>
+                <div class="quick-stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="stat-details">
+                        <h4>Ürün</h4>
+                        <p>547</p>
+                        <span class="trend negative">
+                            <i class="fas fa-caret-down"></i>2%
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3>
+                        Satış Grafiği
+                        <span class="period">6A</span>
+                    </h3>
+                    <div class="chart-placeholder"></div>
+                </div>
+                <div class="chart-card">
+                    <h3>
+                        En Çok Satan
+                        <span class="period">Ay</span>
+                    </h3>
+                    <div class="product-list">
+                        <div class="product-item">
+                            <i class="fas fa-mobile"></i>
+                            <div class="product-info">
+                                <h4>iPhone 14</h4>
+                                <p>156 adet</p>
+                            </div>
+                            <span class="product-price">65k</span>
+                        </div>
+                        <div class="product-item">
+                            <i class="fas fa-laptop"></i>
+                            <div class="product-info">
+                                <h4>MacBook</h4>
+                                <p>89 adet</p>
+                            </div>
+                            <span class="product-price">83k</span>
+                        </div>
+                        <div class="product-item">
+                            <i class="fas fa-headphones"></i>
+                            <div class="product-info">
+                                <h4>AirPods</h4>
+                                <p>234 adet</p>
+                            </div>
+                            <span class="product-price">9k</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activities-container">
+                <h3>
+                    Son İşlemler
+                    <span class="period">Bugün</span>
+                </h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="activity-info">
+                            <h4>Yeni Üye</h4>
+                            <p>Mehmet A.</p>
+                        </div>
+                        <span class="activity-time">14:25</span>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="activity-info">
+                            <h4>Yeni Sipariş</h4>
+                            <p>iPhone 14 (2)</p>
+                        </div>
+                        <span class="activity-time">13:40</span>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <div class="activity-info">
+                            <h4>Stok Güncelleme</h4>
+                            <p>MacBook (+25)</p>
+                        </div>
+                        <span class="activity-time">11:15</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <!-- Tüm header ve cards yapısı kaldırıldı -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Düzenleme Modal -->
+    <div class="edit-modal" id="editModal">
+        <div class="edit-modal-content">
+            <div class="edit-modal-header">
+                <h2>Üye Düzenle</h2>
+                <button class="edit-modal-close" onclick="closeEditModal()">×</button>
+            </div>
+            <form class="edit-form" id="editForm" onsubmit="saveChanges(event)">
+                <input type="hidden" id="editUserId">
+                <div class="form-group">
+                    <label for="editName">Ad Soyad</label>
+                    <input type="text" id="editName" required>
+                </div>
+                <div class="form-group">
+                    <label for="editEmail">E-posta</label>
+                    <input type="email" id="editEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="editRole">Rol</label>
+                    <select id="editRole" required>
+                        <option value="admin">Admin</option>
+                        <option value="editor">Editör</option>
+                        <option value="user">Kullanıcı</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="editStatus">Durum</label>
+                    <select id="editStatus" required>
+                        <option value="active">Aktif</option>
+                        <option value="inactive">Pasif</option>
+                    </select>
+                </div>
+                <div class="edit-form-buttons">
+                    <button type="button" class="btn-cancel" onclick="closeEditModal()">İptal</button>
+                    <button type="submit" class="btn-save">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Sidebar'ı yükle
+        fetch('./components/sidebar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('sidebar-container').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Sidebar yüklenirken hata:', error);
+            });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html> 
